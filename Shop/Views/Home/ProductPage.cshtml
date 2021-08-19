@@ -1,0 +1,19 @@
+﻿@model Shop.Data.Models.Product
+
+@{
+    ViewData["Title"] = Model.name;
+}
+
+<section class="product">
+    <div class="product-block">
+        <div class="product-img-box">
+            <img src="@Model.img" alt="">
+        </div>
+        <div class="product-description-box">
+            <p class="product-descr-heading">@Model.name</p>
+            <p class="product-descr-subtitle">@Model.description</p>
+            <p class="product-descr-price">@Model.price.ToString("c")</p>
+            <a class="product-descr-but" asp-controller="Home" asp-action="CartAddProduct" asp-route-id="@Model.Id">@ViewBag.button</a>
+        </div>
+    </div>
+</section>

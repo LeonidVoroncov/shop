@@ -1,0 +1,25 @@
+﻿@model Shop.ViewModels.LoginModel
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="login-form">
+    <p class="login-heading">Вход</p>
+    <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+            <div class="login-form-group">
+                <input class="login-input" type="text" asp-for="Email" placeholder="E-mail" required />
+                <span asp-validation-for="Email" />
+            </div>
+            <div class="login-form-group">
+                <input class="login-input" asp-for="Password" placeholder="Пароль" required />
+                <span asp-validation-for="Password" />
+            </div>
+            <div class="login-form-group">
+                <input class="login-btn" type="submit" value="Войти" />
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+﻿@model Shop.Data.Models.Product
+
+@{
+    ViewData["Title"] = "Добавление товара";
+}
+
+<section class="product-container">
+    <h1>Добавление товара:</h1>
+    <form asp-action="AddProductForm" asp-controller="Admin" asp-antiforgery="true" method="post" enctype="multipart/form-data">
+        @{await Html.RenderPartialAsync("ProductForm");}
+    </form>
+</section>

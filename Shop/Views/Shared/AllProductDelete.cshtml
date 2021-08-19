@@ -1,0 +1,15 @@
+﻿@model Product
+
+<tr class="product-table-item">
+    <td>@Model.Id</td>
+    <td>@Model.name</td>
+    <td>@Model.description</td>
+    <td><img src="@Url.Content(Model.img)" width="70"></td>
+    <td>@Model.price.ToString("c")</td>
+    <td>@Model.Category.categiryName</td>
+    <td>
+        <a asp-controller="Admin" asp-action="ChangeProductForm" asp-route-id="@Model.Id" class="but-chang-prod">Изменить</a> |
+        <a asp-controller="Admin" asp-action="DelProduct" asp-route-id="@Model.Id" asp-route-img="@Model.img" class="but-del-prod">Удалить</a>       
+    </td>
+</tr>
+

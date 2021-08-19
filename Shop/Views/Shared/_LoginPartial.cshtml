@@ -1,0 +1,19 @@
+﻿
+
+@if (User.Identity.IsAuthenticated)
+{
+    <li class="for-user-item">
+        <form method="post" asp-controller="Account" asp-action="Logout">
+            <input class="but-logout" type="submit" value="Выход" />
+        </form>
+    </li>
+}
+else
+{
+    <li class="for-user-item">
+        <a asp-controller="Account" asp-action="Register">Регистрация</a>
+    </li>
+    <li class="for-user-item">
+        <a asp-controller="Account" asp-action="Login">Войти</a>
+    </li>
+}

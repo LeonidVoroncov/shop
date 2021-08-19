@@ -1,0 +1,28 @@
+﻿@model ProductListViewModel
+
+@{
+    ViewData["Title"] = "Список товаров";
+}
+
+<section class="product-container">
+    <h1>Список продуктов:</h1>
+    <div class="product-management-block">        
+        <a asp-controller="Admin" asp-action="AddProductForm" class="btn-add-product">Добавить товар</a>
+        <a asp-controller="Admin" asp-action="AddCategory" class="btn-add-category">Добавить категорию</a>
+    </div>
+    <table class="product-table-list">
+        <tr class="product-table-item">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Img</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td></td>
+        </tr>       
+        @foreach (var product in Model.product)
+        {
+            @Html.Partial("AllProductDelete", product)
+        }
+    </table>    
+</section>

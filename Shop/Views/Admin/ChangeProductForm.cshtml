@@ -1,0 +1,38 @@
+﻿@model Shop.Data.Models.Product
+
+@{
+    ViewData["Title"] = "Изменение товара";
+}
+
+<section class="product-container">
+    <h1>Изменение товара:</h1>
+    <form asp-action="ChangeProductForm" asp-controller="Admin" asp-route-id="@Model.Id" enctype="multipart/form-data">
+        <div class="form-item">
+            <label asp-for="name">Название товара:</label>
+            <input type="text" asp-for="name" required />
+        </div>
+        <div class="form-item">
+            <label asp-for="description">Описание товара:</label>
+            <textarea asp-for="description" required></textarea>
+        </div>
+        <div class="form-item">
+            <label asp-for="price">Цена товара:</label>
+            <input asp-for="price" required />
+        </div>
+        <div class="form-item">
+            <label asp-for="isFavourite">Появление на главной странице:</label>
+            <input type="checkbox" asp-for="isFavourite" />
+        </div>
+        <div class="form-item">
+            <label asp-for="categoryId">Категория:</label>
+            <select asp-for="categoryId" asp-items="ViewBag.Categories"></select>
+        </div>
+        <div class="form-item">
+            <label asp-for="imageFile">Добавление изображения(png и jpeg):</label>
+            <input asp-for="imageFile" type="file" accept="image/jpeg,image/png" name="uploadedFile">
+        </div>
+        <div class="form-item">
+            <input type="submit" value="Изменить" />
+        </div>
+    </form>
+</section>

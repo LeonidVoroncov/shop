@@ -1,0 +1,41 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+
+<section class="shopping-container">
+    <div class="cart-block">
+        <p class="cart-heading">Корзина <span>(@Model.product.Count())</span></p>
+        @foreach (var product in Model.product) { 
+            <div class="cart-item">
+                <div class="cart-item-img-wrap">
+                    <img src="@product.img" alt="">
+                </div>
+                <div class="cart-item-text-box">
+                    <p class="cart-item-heading">@product.name</p>
+                    <p class="cart-item-subtitle">@product.description</p>
+                    <p class="cart-item-price">@product.price.ToString("c")</p>
+                </div>
+                <div class="cart-item-box-trash">
+                    <a asp-controller="PersonalData" asp-action="CartProdDel" asp-route-id="@product.Id"><img src="/img/icon/trash.svg" alt="" /></a>
+                </div>
+            </div>
+         }
+    </div>
+    <div class="payment-block">
+        <p class="payment-heading">Сумма заказа:</p>
+        <div class="payment-sum">
+            <p class="payment-sum-heading">Стоимость</p>
+            <p class="payment-sum-price">@ViewBag.SumPrice.ToString("c")</p>
+        </div>
+        <div class="payment-total-amount">
+            <p class="payment-total-amount-heading">К оплате</p>
+            <p class="payment-total-amount-price">@ViewBag.SumPrice.ToString("c")</p>
+        </div>
+        <div class="payment-but-box">
+            <button class="payment-but">Оплатить</button>
+        </div>
+    </div>
+</section>

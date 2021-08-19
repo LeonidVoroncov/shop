@@ -1,0 +1,14 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<section class="product-container">
+    <div class="product-list">
+        @foreach (var product in Model.product)
+        {
+            @Html.Partial("AllProducts", product)
+        }
+    </div>
+</section>

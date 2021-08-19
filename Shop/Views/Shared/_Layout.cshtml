@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="navigation-site">
+                <ul class="location-site-list">
+                    <li class="location-site-item"><a href="/">Главная</a></li>
+                </ul>
+                <ul class="for-user-list">                   
+                    <partial name="_AdminPanel" />
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+            <div class="navigation-product">
+                <a href="/"><img class="logo" src="~/img/Logotip.svg" alt=""></a>                
+                <partial name="_CartPanel" />
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+</body>
+</html>

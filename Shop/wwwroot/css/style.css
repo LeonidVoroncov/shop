@@ -1,0 +1,924 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Montserrat',sans-serif;
+    src: local('Montserrat'),
+    url('/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: local('Montserrat-Medium'),
+    url('/fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: local('Montserrat-SemiBold'),
+    url('/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+body {
+    font-family: 'Montserrat-Medium', 'Arial', sans-serif;
+    background-color: #F4F4F4;
+}
+
+a {
+    text-decoration: none;
+   color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.header-container {
+    max-width: 1165px;
+    margin: 0 auto;
+}
+
+.navigation-site {
+    position: relative;
+    max-width: 1165px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 50px;
+    background-color: #E5E5E5;
+}
+
+.location-site-list {
+    display: flex;
+}
+
+.location-site-item {
+    display: block;
+}
+
+.location-site-item a {
+    text-decoration: none;
+    color: #353535;
+    font-size: 14px;
+}
+
+.for-user-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.for-user-item {
+    position: relative;
+    display: block;
+    margin-left: 35px;
+}
+
+.for-user-item::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 17px;
+    background-color: #353535;
+    left: -15px;
+}
+
+.for-user-item a {
+    text-decoration: none;
+    color: #353535;
+    font-size: 14px;
+}
+
+.navigation-product {
+    width: 100%;
+    height: 90px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.search-box {
+    width: 700px;
+    height: 40px;
+    border: 2px solid #505050;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.search {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 0 15px 0 15px;   
+    border-radius: 4px;
+}
+
+.search::placeholder {
+    color: #353535;
+}
+
+.but-search {
+    width: 45px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-left: 2px solid #505050;
+}
+
+.menu-but {
+    width: 35px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.menu-but-item {
+    width: 35px;
+    height: 4px;
+    background-color: #505050;
+    border-radius: 2px;
+}
+
+/* Продукция */
+
+.product-container {
+    max-width: 1165px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: calc(75%/5);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.25);
+}
+
+.product-img-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid #f2f2f238;
+    border-radius: 4px;
+    background-color: rgb(221, 221, 221);
+}
+
+.product-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+.product-price {
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-size: 22px;
+    color: #FF736A;
+    margin-top: 10px;
+}
+
+.product-heading {
+    width: 90%;
+    height: 25px;
+    color: #353535;
+    font-size: 20px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.product-subtitle {
+    width: 90%;
+    height: 18px;
+    color: #353535;
+    font-size: 14px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+/* Подвал */
+
+.footer {
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px -2px 7px -4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-container {
+    max-width: 1165px;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+.footer-heading {
+    font-family: 'Montserrat-Medium';
+    font-size: 24px;  
+    margin-top: 70px; 
+}
+
+.feedback {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-personal-data {
+    margin-left: 30px;
+    position: relative;
+    width: 30%;
+}
+
+.footer-personal-data-email,
+.footer-personal-data-phone {
+    font-family: 'Montserrat-Medium';
+    font-size: 18px;
+    margin: 40px 0 0 20px;
+}
+
+.footer-copywrite {
+    position: absolute;
+    bottom: 0;
+}
+
+.write-us {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.write-us-input-text,
+.write-us-input-message {
+    font-family: 'Montserrat-Medium';
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    border-bottom: 2px solid #353535;
+    padding: 5px;   
+}
+
+.write-us input::placeholder,
+.write-us textarea::placeholder {
+    color: rgba(53, 53, 53, 0.83);
+}
+
+.write-us-input-text {
+    width: calc(90%/3);
+    margin-top: 40px;
+}
+
+.write-us-input-message {
+    width: 100%;
+    height: 30px;
+    resize: none;
+    margin-top: 60px;
+}
+
+.write-us-input-but {
+    border: none;
+    font-size: 20px;
+    margin-top: 70px;
+    color: #FF736A;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+@media all and (max-width: 1230px){
+
+    .product-item {
+        max-width: 200px;
+    }
+
+    .navigation-product div {
+        margin: 0 10px 0 10px;
+    }
+
+    .header-container {
+        width: 95%;
+    }
+
+    .product-container {
+        width: 95%;
+    }
+
+    .footer-container {
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 1070px){
+    .product-item {
+        width: 150px;
+    }
+
+    .product-img-wrap {
+        height: 150px;
+    }
+
+    .product-price {
+        font-size: 18px;
+    }
+    
+    .product-heading {
+        font-size: 18px;
+    }
+    
+    .product-subtitle {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 800px){
+    .footer-heading {
+        margin-top: 30px;
+    }
+    
+    .feedback {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+        align-items: center;
+    }
+
+    .footer-personal-data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .footer-personal-data p {
+        width: calc(90%/2);
+        text-align: center;
+    }
+
+    .footer-personal-data-phone,
+    .footer-personal-data-email {
+        margin: 0;
+    }
+
+    .footer-copywrite {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .write-us {
+        width: 100%;
+    }
+
+}
+
+@media all and (max-width: 600px){
+    .footer-container,
+    .logo,
+    .user-cart,
+    .navigation-site {
+        display: none;
+    }
+
+    .product-container {
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;        
+    }   
+
+    .header::after {
+        width: 0;
+        height: 0;
+    }
+
+    .navigation-product {
+        justify-content: center;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        box-shadow: 0px 2px 7px -4px rgb(0 0 0 / 25%);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .but-search {
+        border-left: 1px solid #353535;
+    }
+    .search-box {
+        width: 60%;
+        height: 30px;
+        border: 1px solid #353535;
+    }
+
+    .header-container {
+        width: 100%;
+    }
+
+    .footer {
+        position: fixed;
+        height: 50px;
+        border-radius: 10px 10px 0 0;
+        bottom: 0;
+    }
+
+    .mobile-footer-list {
+        display: flex;
+        justify-content: space-around;  
+        align-items: center;
+        height: 100%;      
+    }
+
+    .mobile-footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #353535;
+    }
+
+    .mobile-footer-item-img {
+        width: 20px;
+    }
+
+    .min-logo {
+        width: 40px;
+    }
+
+    .mobile-footer-item-text {
+        font-size: 10px;
+        margin-top: 3px;
+    }
+}
+
+@media all and (min-width: 601px){
+    .mobile-footer-list {
+        display: none;
+    }
+}
+
+@media all and (max-width: 450px){
+
+    .product-item {
+        width: calc(70%/2);
+        padding: 10px;
+    }
+
+    .product-img-wrap {
+        height: 130px;
+    }
+
+    .product-container {
+        width: 100%;
+    }
+
+    .product-price {
+        margin-top: 5px;
+    }
+
+    .product-heading,
+    .product-subtitle {
+        margin-top: 0px;
+    }
+}
+
+/* Страница товара */
+
+.product-block {
+    max-width: 1060px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px;
+    box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+.product-description-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 80px;
+}
+
+.product-img-box {
+    width: 350px;
+    height: 430px;
+    border: 1px solid #ff746a38;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-descr-heading {
+    font-family: 'Montserrat-Medium';
+    font-size: 24px;
+    color: #454545;
+}
+
+.product-descr-subtitle {
+    font-family: 'Montserrat-Medium';
+    font-size: 18px;
+    color: #454545;
+}
+
+.product-descr-price {
+    font-family: 'Montserrat-SemiBold';
+    color: #FF736A;
+    font-size: 36px;
+}
+
+.product-descr-but {
+    max-width: 220px;
+    height: 34px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border: 2px solid #FF736A;
+    font-size: 18px;
+    color:#FF736A;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+}
+
+
+/* Страница корзины */
+
+.shopping-container {
+    max-width: 1165px;    
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart-block {
+    width: 700px;
+    background-color: white;
+    border-radius: 13px;
+    padding: 20px 30px 40px 30px;
+    box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.25);
+}
+
+.cart-heading {
+    font-size: 24px;
+    color: #353535;
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.cart-item-checkbox-box {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-checkbox {
+    position: relative;
+    margin-left: 20px;
+}
+
+.cart-item-checkbox::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;   
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #FF7D75;
+    top: -5px;
+    left: -5px;
+}
+
+.cart-item-checkbox:checked::after {
+    position: absolute;
+    cursor: pointer;
+    content: "";
+    top: 0;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon/check-mark.svg") no-repeat;
+}
+
+.cart-item-img-wrap {
+    width: 150px;
+    height: 170px;
+    overflow: hidden;
+}
+
+.cart-item-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.cart-item-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+    width: 450px;
+}
+
+.cart-item-heading {
+    font-size: 20px;
+    width: 100%;
+    max-height: 25px;
+    color: #454545;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item-subtitle {
+    width: 100%;
+    max-height: 50px;
+    font-size: 14px;
+    color: #454545;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item-price {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 22px;
+    color: #FF736A;
+}
+
+
+/* Оплата товара */
+.payment-block {
+    width: 340px;
+    min-height: 276px;
+    background-color: white;
+    border-radius: 13px;
+    padding: 30px 20px 10px 20px;
+    margin-left: 30px;
+    box-shadow: 0px 2px 7px -4px rgba(0, 0, 0, 0.25);
+}
+
+.payment-heading {
+    font-size: 24px;
+    color: #353535;
+}
+
+.payment-sum,
+.payment-total-amount {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-sum-heading,
+.payment-sum-price {
+    font-size: 14px;
+    color: #636363;
+}
+
+.payment-total-amount {
+    margin-top: 40px;
+    border-top: 1px solid #DEDEDE;
+    padding-top: 30px;
+}
+
+.payment-total-amount-heading,
+.payment-total-amount-price {
+    font-family: 'Montserrat-SemiBold';
+    color: #353535;
+    font-size: 18px;
+}
+
+.payment-total-amount-price {
+    font-size: 24px;   
+}
+
+.payment-but-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.payment-but {
+    width: 200px;
+    height: 40px;
+    background-color: #FF736A;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1200px){
+    .shopping-container {
+        max-width: 95%;
+    }
+}
+
+/*Форма добавления товара*/
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 400px;
+}
+
+.form-item label {
+    padding-bottom: 5px; 
+}
+
+.form-item input {
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+}
+
+.form-item textarea {
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    outline: none;
+}
+
+.form-item select {
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+}
+
+/*Таблица со всем товаром*/
+
+.product-management-block {
+    margin: 40px 0 40px 0;
+}
+
+.product-management-block a {
+    padding: 10px 20px 10px 20px;
+    background: #0bcb15;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none; 
+    font-size: 14px;
+}
+
+.btn-add-category {
+    margin-left: 50px;
+}
+
+.product-table-list {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.product-table-item {
+    border-bottom: 1px solid black;
+}
+
+.product-table-item td {    
+    padding: 5px;
+    text-align: center;
+}
+
+.product-table-item:first-child {
+    font-weight: bold;
+}
+
+.product-table-item td:nth-child(3) {
+    max-width: 250px;
+}
+
+.but-logout {
+    font-family: 'Montserrat-Medium', 'Arial', sans-serif;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*Форма входа и регистрации на сайте*/
+
+.login-form {
+    width: 450px;
+    max-height: 450px;
+    background-color: white;
+    border-radius: 13px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 30px 0 50px 0;
+    box-shadow: 0px 3px 7px -4px rgba(0, 0, 0, 0.25);
+}
+
+.login-form .validation {
+    margin: 30px 0 0 40px;
+    color: red;
+    position: absolute;
+}
+
+.login-heading {
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.login-heading::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #DEDEDE;
+    bottom: -20px;
+    left: 0;
+}
+
+.login-form-group {
+    width: 330px;
+    margin: 0 auto;
+}
+
+.login-form-group .login-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #353535;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 70px;
+}
+
+.login-form-group .login-input::placeholder {
+    color: black;
+}
+
+.login-form-group .login-btn {
+    background-color: #FF736A;
+    color: white;
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.readdres-reg {
+    margin-left: 70px;
+}

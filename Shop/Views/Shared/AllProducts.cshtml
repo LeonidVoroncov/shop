@@ -1,0 +1,13 @@
+﻿@model Product
+
+<a class="product-item" asp-controller="Home" asp-action="ProductPage" asp-route-id="@Model.Id">
+    <div class="product-img-wrap">
+        <img src="@Model.img" alt="@Model.name">
+    </div>
+    <p class="product-price">@Model.price.ToString("c")</p>
+    <p class="product-heading">@Model.name</p>
+    <p class="product-subtitle">@Model.description</p>
+</a>
+
+
+
